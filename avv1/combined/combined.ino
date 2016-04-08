@@ -6,7 +6,7 @@
 
 // Setup the WiFi
 char ssid[] = "iPhone van Maaike (2)"; //  your network SSID (name) 
-char pass[] = "mudkippers8"; // your network password
+char pass[] = "password"; // your network password
 int status = WL_IDLE_STATUS;
 WiFiClient  client;
 
@@ -20,7 +20,7 @@ int sound;
 
 // Thinkspeak channel and api key
 long myChannelNumber = 105996; // Set channel number
-const char * myWriteAPIKey = "98AAP0LS8OMT91C3";
+const char * myWriteAPIKey = "APIKey";
 
 void setup() {
   WiFi.begin(ssid, pass);
@@ -42,6 +42,6 @@ void loop() {
   // will only update every 15 seconds, even if we send data more often
   ThingSpeak.writeFields(myChannelNumber, myWriteAPIKey); 
   
-  eiotcloud.sendParameter("5706e20ac943a0661cf314e2/bkC0ngv6sHnMzoQo", sound);
-  eiotcloud.sendParameter("5706e20ac943a0661cf314e2/6NEVJqRfYL4WQFNX", button); 
+  eiotcloud.sendParameter("Write Key", sound);
+  eiotcloud.sendParameter("Write Key", button); 
 }
