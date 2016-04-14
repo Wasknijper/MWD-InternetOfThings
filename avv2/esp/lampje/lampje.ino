@@ -12,7 +12,6 @@
 
 #include <ESP8266HTTPClient.h>
 
-
 char ssid[] = "iPhone van Maaike (2)"; //  your network SSID (name) 
 char pass[] = "pw"; // your network password
 int status = WL_IDLE_STATUS;
@@ -21,7 +20,7 @@ WiFiClient  client;
 void setup() {
   WiFi.begin(ssid, pass);
   Serial.begin(9600);
-  // initialize digital pin 13 as an output.
+
   pinMode(D0, OUTPUT);
   pinMode(LED_BUILTIN, OUTPUT);
 }
@@ -34,11 +33,13 @@ void loop() {
   int httpCode = http.GET();        
   String payload = http.getString();
 
-  if (payload == "0") {
+  if (payload == "off") {
     digitalWrite(LED_BUILTIN, LOW);
+    digitalWrite(D0, LOW);
     Serial.println(payload);
   } else {
     digitalWrite(LED_BUILTIN, HIGH);
+    digitalWrite(D0, HIGH);
     Serial.println(payload);
   }
   

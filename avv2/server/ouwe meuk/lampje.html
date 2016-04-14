@@ -1,0 +1,65 @@
+// <?php
+// header("Access-Control-Allow-Origin: *");
+// $file = 'lampje.txt';
+// $fileLeander = 'http://robertspier.nl/hva/iot/lampje.txt';
+
+// $value = file_get_contents($file);
+// $valueLeander = file_get_contents($fileLeander);
+
+// if($value == 1){
+// 	$message = 'Lampje is aan!';
+// } else {
+// 	$message = 'Lampje is uit!';
+// }
+
+// if($valueLeander == 1){
+// 	$messageLeander = 'Lampje is aan!';
+// } else {
+// 	$messageLeander = 'Lampje is uit!';
+// }
+
+// if(isset($_POST['on']))
+// {
+//         $previous = file_get_contents($file);
+//         file_put_contents($file, '1');
+//         $message = 'Lampje is aan!';
+//     }
+
+// if(isset($_POST['off']))
+// {
+//         $previous = file_get_contents($file);
+//         file_put_contents($file, '0');
+//         $message = 'Lampje is uit!';
+//     }
+
+// if(isset($_POST['onLeander']))
+// {
+//         $previous = file_get_contents($fileLeander);
+//         file_put_contents($fileLeander, '1');
+//         $messageLeander = 'Lampje is aan!';
+//     }
+
+// if(isset($_POST['offLeander']))
+// {
+//         $previous = file_get_contents($fileLeander);
+//         file_put_contents($fileLeander, '0');
+//         $messageLeander = 'Lampje is uit!';
+//     }    
+?> 
+
+<html>
+	<body> 
+		<h1> LED there be light! </h1>   
+		<form action="" method="post">
+			<p>Maaike's <?php echo $message; ?></p>
+			<?php echo $valueLeander; ?>
+			<input type="submit" name="on" value="On" />
+			<input type="submit" name="off" value="Off" />
+
+
+			<p>Leander's <?php echo $messageLeander; ?></p>
+			<input type="submit" name="onLeander" value="On" />
+			<input type="submit" name="offLeander" value="Off" />
+		</form>    
+	</body>
+</html>
