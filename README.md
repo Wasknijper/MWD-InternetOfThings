@@ -38,7 +38,7 @@ Make a few files:
 ####Index.php
 Feel free to copy the index.php directly from here.
 
-It contains some PHP code that listens if something is send to our site. The first part, line 2-6, will listen if a value named servo is posted. If this is true, it will save the value in servo.txt.
+It contains some PHP code that listens if something is send to our site. The first part, [line 2-6](https://github.com/Wasknijper/MWD-InternetOfThings/blob/master/manual%20code/index.php#L2), will listen if a value named servo is posted. If this is true, it will save the value in servo.txt.
 
 The second PHP part will listen if another server, not your current host, is requesting/sending some data to our hosting. In here we write the PIR value into movement.json. But before we do so, we add a timestamp, so we know when our furry friend was moving.
 
@@ -80,12 +80,12 @@ String path = "/path/to/movement.json";`
 const int httpPort = 80;
 ```
 
-There are a few more lines you need to edit, like line 44.
+There are a few more lines you need to edit, like [line 35](https://github.com/Wasknijper/MWD-InternetOfThings/blob/master/manual%20code/cattoy/cattoy.ino#L35).
 ```
-http.begin("http://yourdomain.com/patg/to/servo.txt");
+http.begin("http://yourdomain.com/path/to/servo.txt");
 ```
 
-And lines XX
+And [lines 49 & 50](https://github.com/Wasknijper/MWD-InternetOfThings/blob/master/manual%20code/cattoy/cattoy.ino#L49)
 ```
 client.println("POST /path/to/index.php HTTP/1.1");
 client.println("Host: www.yourdomain.com:80");
