@@ -59,31 +59,36 @@ Feel free to copy the arduino sketch directly from here.
 
 First thing we do is include some libraries:
 
-`#include <ESP8266WiFi.h>
-#include <Servo.h>`
+`#include <ESP8266WiFi.h>`
+`#include <Servo.h>`
 
 Now, my .ino file has a lot more includes, however these are automatically added when adding the ESP8266WiFi library.
 
 After that your need to set up the wifi connection, ssid is the name of your wifi and password should speak for it self.
-`char ssid[] = "wifi name";
-char pass[] = "your password";`
+`char ssid[] = "wifi name";`
+`char pass[] = "your password";`
 
 After that we need to connect to the hosting. Enter your domain, the path to where you keep movement.json and lastly the port. Usually this is 80, unless you changed this yourself, so in 99% of the cases you don't need to change is,
 
-`char* host = "www.yourdomain.nl";
-String path = "/path/to/movement.json";
-const int httpPort = 80;`
+`char* host = "www.yourdomain.nl";`
+`String path = "/path/to/movement.json";`
+`const int httpPort = 80;`
 
 There are a few more lines you need to edit, like line 44.
 `http.begin("http://yourdomain.com/patg/to/servo.txt");`
 
 And lines XX
-`client.println("POST /path/to/index.php HTTP/1.1");
-client.println("Host: www.yourdomain.com:80");`
+`client.println("POST /path/to/index.php HTTP/1.1");`
+`client.println("Host: www.yourdomain.com:80");`
 
 After all that, you can upload the code to your NodeMCU.
 
 ##Controlling the servo
+If everything went right, you can surf to your host and see something like this:
+
+*pic*
+
+Sliding the slider and hitting send should make you servo change position with in a half second, or maybe a little longer if your wifi is a bit slow.
 
 ##References
 
