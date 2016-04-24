@@ -36,7 +36,7 @@ Make a few files:
 - Movement.json, where we will save if kitty is moving or has moved
 
 ####Index.php
-Feel free to copy the index.php directly from here.
+Feel free to copy the index.php directly from [here](https://github.com/Wasknijper/MWD-InternetOfThings/blob/master/manual%20code/index.php).
 
 It contains some PHP code that listens if something is send to our site. The first part, [line 2-6](https://github.com/Wasknijper/MWD-InternetOfThings/blob/master/manual%20code/index.php#L2), will listen if a value named servo is posted. If this is true, it will save the value in servo.txt.
 
@@ -55,7 +55,7 @@ Nothing! Just keep this file empty.
 An empty array, like so: `[]`
 
 ###NodeMCU Code
-Feel free to copy the arduino sketch directly from here.
+Feel free to copy the arduino sketch directly from [here](https://github.com/Wasknijper/MWD-InternetOfThings/blob/master/manual%20code/cattoy/cattoy.ino).
 
 First thing we do is include some libraries:
 
