@@ -101,6 +101,7 @@ If everything went right, you can surf to your host and see something like this:
 Sliding the slider and hitting send should make you servo change position with in a half second, or maybe a little longer if your wifi is a bit slow.
 
 ##References
-- Leander van Baekel for helping me with the code. 
+- Leander van Baekel for helping me with the code.
+- Linda van Dijk for supplying the bulk of the css.
 - [Servo Sweep tutorial](https://www.arduino.cc/en/Tutorial/Sweep)
 - [Servo SG90 Datasheet](http://avrchip.com/wp-content/uploads/2015/12/sg90-tower-pro-servo-cable-pin.jpg)
