@@ -17,13 +17,13 @@ My cat occasionally gets bored being home alone all day, with none of his silly 
 ###Hardware set-up
 The most important thing is the servo. First we need to attach the cat toy to the servo. I used a stick to add some range to the movement of my servo. Then I taped the stick to the 'wing'of the servo. Lastly, tried a cat toy to a piece of string and tied it to the stick. 
 
-*pic*
+![cattoy](setup1.png)
 
 Now on to the board set-up. We will have to connect the PIR-sensor (to see if our cat is actually doing something) and our servo (or else there will be nothing moving). 
 
 Connect the PIR sensor to the *D0* and the servo to the *D1*. 
 
-*PIC*
+![setup](setup2.png)
 
 When actually using this, make sure to fasten the servo somewhere secure, so your lovely furball won't drag it down when playing with the toy, Securing the wing onto your servo with a screw is also a smart move.
 
@@ -96,11 +96,11 @@ After all that, you can upload the code to your NodeMCU.
 ##Controlling the servo
 If everything went right, you can surf to your host and see something like this:
 
-*pic*
+![screenshot](screenshot.png)
 
 Sliding the slider and hitting send should make you servo change position with in a half second, or maybe a little longer if your wifi is a bit slow.
 
 ##References
--
--
--
+- Leander van Baekel for helping me with the code. 
+- [Servo Sweep tutorial](https://www.arduino.cc/en/Tutorial/Sweep)
+- [Servo SG90 Datasheet](http://avrchip.com/wp-content/uploads/2015/12/sg90-tower-pro-servo-cable-pin.jpg)
